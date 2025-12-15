@@ -11,6 +11,8 @@ from typing import TypedDict, Annotated, Sequence
 from langgraph.graph.message import add_messages
 from langchain_core.messages import HumanMessage, SystemMessage, BaseMessage, AIMessage
 
+
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 load_dotenv()
 
 # 1. 读取Excel并构建Document列表
